@@ -46,7 +46,7 @@ const PostEdit = ({ onCancel, initialValues }) => {
 
     try {
       const response = await axios.put(
-        `http://192.168.0.195:5000/viagem`,
+        `http://127.0.0.1:5000/viagem`,
         formData
       );
       window.location.reload();
