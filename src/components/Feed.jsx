@@ -35,7 +35,7 @@ const Feed = () => {
 
   const loadPosts = async () => {
     try {
-      const response = await axios.get("http://192.168.0.195:5000/viagens");
+      const response = await axios.get("http://127.0.0.1:5000/viagens");
       const postsData = response.data.viagem.reverse().map((post) => ({
         ...post,
         postState: {
@@ -122,7 +122,7 @@ const Feed = () => {
       const formData = new FormData();
       formData.append("id", postId);
 
-      const response = await fetch(`http://192.168.0.195:5000/viagem`, {
+      const response = await fetch(`http://127.0.0.1:5000/viagem`, {
         method: "DELETE",
         body: formData,
       });
